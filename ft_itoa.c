@@ -6,14 +6,14 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 16:52:17 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 18:08:36 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/09 21:18:38 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-void	ft_strconv(char *str, int nbr)
+static void	ft_strconv(char *str, int nbr)
 {
 	int		i;
 
@@ -32,7 +32,7 @@ void	ft_strconv(char *str, int nbr)
 	str[++i] = '\0';
 }
 
-void	ft_strrev(char *dest, char *src)
+static void	ft_strrevitoa(char *dest, char *src)
 {
 	int		len;
 	int		count;
@@ -51,7 +51,7 @@ void	ft_strrev(char *dest, char *src)
 	dest[++i] = '\0';
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*tmp;
 	char	*str;
@@ -74,7 +74,7 @@ char	*ft_itoa(int n)
 	if (!tmp || !str)
 		return (NULL);
 	ft_strconv(tmp, n);
-	ft_strrev(str, tmp);
+	ft_strrevitoa(str, tmp);
 	free(tmp);
 	return (str);
 }

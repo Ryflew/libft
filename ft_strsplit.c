@@ -6,14 +6,14 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 22:51:03 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/09 00:52:55 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/09 21:18:58 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-size_t	ft_countwords(const char *str, char c)
+static size_t	ft_countwords(const char *str, char c)
 {
 	short	letters;
 	int		i;
@@ -35,7 +35,7 @@ size_t	ft_countwords(const char *str, char c)
 	return (count);
 }
 
-size_t	ft_countletters(const char *str, char c)
+static size_t	ft_countletters(const char *str, char c)
 {
 	int		count;
 	int		i;
@@ -47,7 +47,7 @@ size_t	ft_countletters(const char *str, char c)
 	return (count);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	int		i;
 	int		count;

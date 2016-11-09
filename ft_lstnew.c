@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 19:46:55 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 22:49:23 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/09 18:19:38 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		}
 		else
 		{
-			new->content = malloc(content_size);
+			new->content = malloc(sizeof(*content) * content_size);
 			if (!(new->content))
 			{
 				free(new);
