@@ -6,11 +6,13 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 19:31:36 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/07 22:49:10 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/10 20:39:04 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+#include <string.h>
+
+size_t	ft_strlen(const char *str)
 {
 	int		i;
 

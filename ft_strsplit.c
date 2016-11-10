@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 22:51:03 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/09 21:18:58 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/10 21:15:22 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ static size_t	ft_countletters(const char *str, char c)
 	count = 0;
 	while ((str[++i] != c) && str[i])
 		count++;
+	if (str[i] != c)
+		return (0);
 	return (count);
 }
 
@@ -64,7 +66,7 @@ char			**ft_strsplit(char const *s, char c)
 		{
 			count = ft_countletters(s, c);
 			if (!count)
-				return (str);
+				break;
 			str[++i] = ft_strsub(s, 0, count);
 			if (!str[i])
 				return (NULL);

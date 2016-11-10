@@ -6,36 +6,37 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 00:40:53 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 18:31:32 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/10 18:53:59 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *source, size_t size1)
 {
-	char		*s1;
-	char		*s2;
-	size_t		i;
+	char		*strdest;
+	const char	*src;
+	size_t		n;
 	size_t		len;
 
-	if (!dst || !src)
-		return (0);
-	s1 = dst;
-	s2 = (char*)src;
-	i = size;
-	while (i-- && *s1)
-		s1++;
-	len = s1 - dst;
-	i = size - len;
-	if (i == 0)
-		return (len + ft_strlen(s2));
-	while (*s2)
+	strdest = dest;
+	src = source;
+	n = size1;
+	while ((n-- != 0) && *strdest)
+		strdest++;
+	len = strdest - dest;
+	n = size1 - len;
+	if (n == 0)
+		return (len + ft_strlen((char*)src));
+	while (*src)
 	{
-		if (i-- != 1)
-			*s1++ = *s2;
-		s2++;
+		if (n != 1)
+		{
+			*strdest++ = *src;
+			n--;
+		}
+		src++;
 	}
-	*s1 = '\0';
-	return (len + (s2 - src));
+	*strdest = '\0';
+	return (len + (src - source));
 }

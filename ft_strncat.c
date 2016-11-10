@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 00:29:55 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 18:32:55 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/10 19:35:22 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,16 @@
 char	*ft_strncat(char *dest, const char *src, size_t n)
 {
 	size_t	i;
-	char	*s1;
-	char	*s2;
+	size_t	i2;
 
-	i = 0;
-	s1 = dest;
-	s2 = (char*)src;
 	if (!dest || !src)
 		return (NULL);
-	while (*s1 != '\0')
-		s1++;
-	while (*s2 != '\0' && (i++ < n))
-	{
-		*s1 = *s2;
-		s1++;
-		s2++;
-	}
-	if (*s2 == '\0')
-		*s1 = '\0';
+	i = 0;
+	i2 = 0;
+	while (dest[i] != '\0')
+		i++;
+	while (src[i2] != '\0' && n-- > 0)
+		dest[i++] = src[i2++];
+	dest[i] = '\0';
 	return (dest);
 }
