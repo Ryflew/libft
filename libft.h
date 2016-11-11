@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 19:09:28 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/10 20:46:24 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/11 02:33:55 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int					ft_tolower(int c);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
-size_t				ft_strlcat(char *dest, const char *source, size_t size1);
+size_t				ft_strlcat(char *dest, const char *src, size_t n);
 size_t				ft_lstcount(t_list **lst);
 size_t				ft_strlen(char *str);
 void				ft_putchar(char c);
