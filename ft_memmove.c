@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 01:28:59 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 18:18:38 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 00:37:05 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*tmp;
 
-	if (!dest || !src)
-		return (NULL);
 	tmp = (char*)malloc(n);
 	ft_memcpy(tmp, src, n);
 	ft_memcpy(dest, tmp, n);

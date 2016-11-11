@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 20:33:09 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/10 20:34:35 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 00:40:10 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	len2;
 
-	if (!big || !little)
-		return (NULL);
 	if (!*little)
 		return ((char *)big);
 	len2 = ft_strlen((char*)little);

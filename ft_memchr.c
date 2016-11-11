@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 15:53:24 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/10 19:09:30 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 00:37:13 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*dest;
 
-	if (!s)
-		return (NULL);
 	dest = (unsigned char*)s;
 	while (n--)
 	{

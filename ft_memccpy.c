@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 00:41:13 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 18:13:12 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 00:36:53 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 
 	dest_bis = dest;
 	src_bis = (void*)src;
-	if (!dest_bis || !src_bis)
-		return (NULL);
 	while (n--)
 	{
 		if ((*dest_bis++ = *src_bis++) == (unsigned char)c)

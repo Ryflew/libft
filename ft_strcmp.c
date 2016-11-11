@@ -6,14 +6,12 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 02:48:04 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 18:26:10 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 00:44:35 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_strcmp(char *s1, char *s2)
 {
-	if (!s1 || !s2)
-		return (0);
 	while (*s1 && *s2 && (*s1 == *s2))
 	{
 		s1++;

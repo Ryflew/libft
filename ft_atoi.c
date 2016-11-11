@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 21:10:12 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/09 17:45:22 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 00:40:40 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@ int		ft_atoi(char *nptr)
 	long	result;
 	int		nega;
 
-	if (!nptr)
-		return (0);
 	nega = 1;
 	result = 0;
 	while ((*nptr == '\t') || (*nptr == '\n') || (*nptr == '\r')

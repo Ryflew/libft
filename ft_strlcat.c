@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 00:40:53 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/11 02:37:52 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 00:38:50 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 	size_t	i;
 	size_t	destlen;
 
-	if (!dest || !src)
-		return (0);
 	i = 0;
 	while (dest[i] && i < n)
 		i++;

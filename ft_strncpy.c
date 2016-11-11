@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 20:36:58 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 19:02:41 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 00:38:10 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
 	size_t	i;
 
-	if (!dest || !src)
-		return (NULL);
 	i = 0;
 	while (src[i] && (i < n))
 	{

@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 02:44:40 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 19:05:54 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 00:39:57 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strstr(const char *big, const char *little)
 	int		big_len;
 	int		little_len;
 
-	if (!big || !little)
-		return (NULL);
 	count = -1;
 	big_len = ft_strlen((char*)big);
 	little_len = ft_strlen((char*)little) - 1;

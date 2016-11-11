@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 01:18:30 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 19:05:20 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 00:39:37 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strrchr(const char *s, int c)
 	int		i;
 	char	*out;
 
-	if (!s)
-		return (NULL);
 	out = NULL;
 	i = 0;
 	while (s[i])

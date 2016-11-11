@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 19:41:06 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 18:28:10 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 00:37:51 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strdup(char *src)
 	char	*out;
 	int		i;
 
-	if (!src)
-		return ((void*)0);
 	i = 0;
 	while (src[i])
 		i++;
