@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 23:40:29 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/10 18:32:01 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 19:06:58 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	*new;
 	t_list	*tmp;
 
-	if (!lst || !f)
-		return (NULL);
 	new = f(lst);
 	if ((result = ft_lstnew(new->content, new->content_size)))
 	{

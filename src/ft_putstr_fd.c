@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 16:38:23 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 17:45:51 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 19:05:46 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	if (!s)
-		return ;
 	while (*s)
 	{
 		ft_putchar_fd(*s, fd);

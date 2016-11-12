@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 22:12:27 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 19:06:31 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 19:04:08 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*str;
 	int		size;
 
-	if (!s)
-		return (NULL);
 	i = -1;
 	size = ft_strlen((char*)s);
 	if (!s || ((size - start) < len))

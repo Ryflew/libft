@@ -6,14 +6,12 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 16:34:54 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/10 20:39:57 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 18:54:10 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	if (!s || !f)
-		return ;
 	while (*s)
 	{
 		f(s);

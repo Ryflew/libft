@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 16:29:45 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 16:46:11 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 18:54:29 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	i = 0;
-	if (!s)
-		return (NULL);
 	len = ft_strlen((char*)s);
 	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
 		return (NULL);

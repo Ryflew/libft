@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 17:10:01 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 17:42:14 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 18:55:23 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len;
 	int		i;
 
-	if (!s1 || !s2)
-		return (NULL);
 	i = -1;
 	len = ft_strlen((char*)s1) + ft_strlen((char*)s2) + 1;
 	if (!(str = (char*)malloc(sizeof(char) * len)))

@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 22:51:03 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/11 02:07:32 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 18:56:48 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,6 @@ char			**ft_strsplit(char const *s, char c)
 	char	**str;
 
 	i = -1;
-	if (!s || !c)
-		return (NULL);
 	if (!(str = (char**)malloc(sizeof(char*) * (ft_countwords(s, c) + 1))))
 		return (NULL);
 	while (*s)
@@ -64,6 +62,11 @@ char			**ft_strsplit(char const *s, char c)
 		{
 			count = ft_countletters(s, c);
 			str[++i] = ft_strsub(s, 0, count);
+			if (!str[i])
+			{
+				ft_strdel(str);
+				return (NULL);
+			}
 			s += count;
 		}
 		else

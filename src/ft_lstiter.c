@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 23:35:39 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 23:40:00 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 19:09:44 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
 	t_list		*next;
 
-	if (!lst || !f)
-		return ;
 	next = lst;
 	while (next)
 	{

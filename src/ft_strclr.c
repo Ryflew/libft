@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 01:33:26 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 01:35:50 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 18:54:00 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@ void	ft_strclr(char *s)
 	int		i;
 
 	i = -1;
-	if (!s)
-		return ;
 	while (s[++i])
 		s[i] = '\0';
 }

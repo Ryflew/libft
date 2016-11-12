@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 01:36:17 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 01:50:03 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 18:54:25 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	int		i;
 
 	i = -1;
-	if (!s)
-		return (NULL);
 	len = ft_strlen((char*)s);
 	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
 		return (NULL);

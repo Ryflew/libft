@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 02:14:24 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/08 17:44:25 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2016/11/12 18:53:33 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 void	ft_memdel(void **ap)
 {
-	if (!ap)
-		return ;
 	free(*ap);
 	*ap = NULL;
 }
