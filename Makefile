@@ -6,11 +6,13 @@
 #    By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 07:22:10 by vdarmaya          #+#    #+#              #
-#    Updated: 2016/11/09 18:50:15 by vdarmaya         ###   ########.fr        #
+#    Updated: 2016/11/12 18:03:21 by vdarmaya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+FLAG = -Wall -Wextra -Werror
 
 SRC = ft_strcpy.c ft_strdup.c ft_strlen.c ft_strncpy.c ft_strcat.c \
 		ft_strncat.c ft_strchr.c ft_strrchr.c ft_strcmp.c ft_strstr.c \
@@ -27,17 +29,30 @@ SRC = ft_strcpy.c ft_strdup.c ft_strlen.c ft_strncpy.c ft_strcat.c \
 		ft_puttabstr.c ft_memtaballoc.c ft_lstcount.c ft_lstaddend.c \
 		ft_lstaddmid.c
 
-SRC_O = $(SRC:.c=.o)
+OBJ = $(SRC:.c=.o)
+
+SRCDIR = ./src/
+
+OBJDIR = ./obj/
+
+INCDIR = ./include/
+
+SRCS = $(addprefix $(SRCDIR), $(SRC))
+
+OBJS = $(addprefix $(OBJDIR), $(OBJ))
 
 all: $(NAME)
 
 $(NAME):
-	@gcc -Wall -Werror -Wextra -c $(SRC)
-	@ar rc $(NAME) $(SRC_O)
+	@gcc $(FLAG) -c $(SRCS) -I$(INCDIR)
+	@mkdir -p $(OBJDIR)
+	@mv $(OBJ) $(OBJDIR)
+	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 
 clean:
-	@rm -f $(SRC_O)
+	@rm -rf $(OBJS)
+	@rm -rf $(OBJDIR)
 
 fclean: clean
 	@rm -f $(NAME)
