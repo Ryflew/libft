@@ -6,7 +6,7 @@
 /*   By: vdarmaya <vdarmaya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 19:09:28 by vdarmaya          #+#    #+#             */
-/*   Updated: 2016/11/11 02:33:55 by vdarmaya         ###   ########.fr       */
+/*   Updated: 2017/01/08 23:45:15 by vdarmaya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ void				ft_lstdel(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_puttabstr(char **str);
-void				ft_lstaddend(t_list **alst, t_list *new);
+void				ft_lstaddend(t_list **blst, void const *content,
+						size_t content_size);
 void				ft_lstaddmid(t_list **alst, t_list *previous, t_list *new);
 void				ft_bzero(void *s, size_t n);
 char				*ft_strdup(char *src);
